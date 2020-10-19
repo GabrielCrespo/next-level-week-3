@@ -76,3 +76,14 @@ function toggleSelect(event) {
     input.value = button.dataset.value;
     // verificar sim ou não
 }
+
+function validate(event) {
+
+    const lat = document.getElementsByName('lat')[0].value;
+    const lng = document.getElementsByName('lng')[0].value;
+
+    if(lat == '' &&  lng == ''){
+        event.preventDefault();
+        alert("Escolha uma localização no mapa")
+    }
+}
